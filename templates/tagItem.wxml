@@ -1,0 +1,6 @@
+<template name="tagItem">
+  <view class="tag">
+    <label>{{key}}</label>
+    <icon type="clear" size="20" />
+  </view>
+</template>

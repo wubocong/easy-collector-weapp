@@ -1,0 +1,14 @@
+<!-- index.wxml -->
+<view class="index">
+  <view bindtap="bindViewTap" class="index-userinfo">
+    <image class="index-userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="index-userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="index-welcome">
+    <text>快速收集信息</text>
+  </view>
+  <view class="index-button">
+    <button type="primary" bindtap="createCollection">创建收集</button>
+    <button type="default" bindtap="viewCollection">查看数据</button>
+  </view>
+</view>

@@ -1,0 +1,39 @@
+/**index.wxss**/
+
+.index {
+  margin: 200rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.index-userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index-userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.index-userinfo-nickname {
+  color: #aaa;
+}
+
+.index-welcome {
+  margin-top: 50rpx;
+  text-align: center;
+}
+
+.index-button {
+  margin-top: 150rpx;
+}
+
+.index-button button {
+  margin-bottom: 20rpx;
+  width: 300rpx;
+}
