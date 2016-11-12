@@ -6,7 +6,8 @@ Page({
     console.log(e.detail.value)
   },
   formSubmit: function (e) {
-    Object.assign(app.globalData.sheet, e.detail.value)
+    app.globalData.sheet.title=e.detail.value.title
+    app.globalData.sheet.outline=e.detail.value.outline
     wx.navigateTo({
       url: '../form/form'
     })

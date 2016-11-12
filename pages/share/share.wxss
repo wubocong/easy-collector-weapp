@@ -1,0 +1,11 @@
+.tags {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 15rpx;
+}
+
+.tags .tag {
+  margin: 5rpx 10rpx;
+}

@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/outline/outline",
-    "pages/form/form"
+    "pages/form/form",
+    "pages/share/share"
   ],
   "window":{
     "backgroundTextStyle":"light",

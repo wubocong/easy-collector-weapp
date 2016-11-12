@@ -25,6 +25,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    sheet:{},
+    tagOrder: 0,
+    sheet: { link: 'http://example.com' },
   }
 })

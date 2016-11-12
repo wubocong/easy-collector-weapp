@@ -14,7 +14,7 @@
     </view>
     <view class="btn-area">
       <button type="primary" formType="submit">下一步</button>
-      <button formType="reset">重置</button>
+      <button type="warn" formType="reset">重置</button>
     </view>
   </form>
 </view>
