@@ -14,13 +14,21 @@ Page({
     }
   },
   bindTagInput: function (e) {
-    let value = e.detail.value
-    if (/\s/.test(value.slice(-1)) && (value = value.trim(/\s*/)) && !this.data.tags.includes(value)) {
-      this.data.tags.push(value)
+    let key = e.detail.value
+    if (/\s/.test(key.slice(-1)) && (key = key.trim(/\s*/)) && !this.data.tags.includes(key)) {
+      this.data.tags.push(key)
       this.setData({ tags: this.data.tags })
       return {
         value: '',
       }
+    }
+  },
+  addPresetTag: function (e) {
+    console.log(e)
+    const key = e.target.dataset.key
+    if (!this.data.tags.includes(key)) {
+      this.data.tags.push(key)
+      this.setData({ tags: this.data.tags })
     }
   },
   deleteTag: function (e) {
