@@ -10,6 +10,7 @@ Page({
   goBack: () => {
     wx.navigateBack()
   },
+  onSubmit: () => { },
   onLoad: function () {
     this.setData({ link: app.globalData.sheet.link || '获取链接失败' })
   },

@@ -1,16 +1,27 @@
+<import src="../../templates/tagItem.wxml" />
 <view class="page">
-  <view class="page__hd">
-    <text class="page__title">标题与简介</text>
-    <text class="page__desc">表单</text>
-  </view>
+  <view class="blank-header"></view>
   <form class="page__bd" catchsubmit="formSubmit" catchreset="formReset">
     <view class="section">
       <view class="section__title">标题</view>
-      <input name="title" placeholder="让你的填写者更快认出我" />
+      <input name="title" bindblur="bindTitleBlur" placeholder="让你的填写者更快认出我" />
     </view>
     <view class="section">
       <view class="section__title">简介</view>
-      <textarea name="outline" bindblur="bindTextAreaBlur" maxlength="140" auto-height placeholder="告诉他们为什么要输入自己的信息" />
+      <textarea name="outline" bindblur="bindOutlineBlur" maxlength="140" auto-height placeholder="告诉他们为什么要输入自己的信息" />
+    </view>
+    <view class="section">
+      <view class="section__title">项目</view>
+      <view class="tags">
+        <view wx:for="{{tags}}" wx:key="*this">
+          <template is="tagItem" data="{{key:item}}" />
+        </view>
+      </view>
+      <view class="section__title">常用</view>
+      <view class="tags" bindtap="">
+        <template is="tagItem" data="{{key: 'wbc', noIcon: true}}" />
+      </view>
+      <input bindblur="bindTagBlur" bindinput="bindTagInput" placeholder="名称" />
     </view>
     <view class="btn-area">
       <button type="primary" formType="submit">下一步</button>

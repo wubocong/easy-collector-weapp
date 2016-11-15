@@ -2,11 +2,28 @@ wx-button {
   margin-top: 20rpx;
   margin-bottom: 20rpx;
 }
+
 wx-label {
   display: block;
   margin-top: 10rpx;
 }
-.picker-text {
-  margin-left: 20rpx;
-  position: relative;
+
+.tags {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 15rpx;
+}
+
+.tags .tag {
+  margin: 5rpx 10rpx;
+}
+
+textarea {
+  height: 100rpx;
+}
+
+.blank-header {
+  margin-top: 40rpx;
 }
