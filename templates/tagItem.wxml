@@ -1,6 +1,6 @@
 <template name="tagItem">
   <view class="tag">
-    <text bindtap="{{noIcon && addPresetTag}}" data-key="{{key}}">{{key}}</text>
+    <text bindtap="addPresetTag" data-key="{{key}}">{{key}}</text>
     <icon wx:if="{{!noIcon}}" type="clear" size="20" bindtap="deleteTag" data-key="{{key}}" />
   </view>
 </template>
