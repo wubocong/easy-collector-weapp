@@ -65,7 +65,7 @@ Page({
   },
   addPresetTag: function (e) {
     const key = e.target.dataset.key
-    if (!this.data.tags.includes(key)) {
+    if (!this.includes(key)) {
       this.data.tags.push(key)
       this.setData({ tags: this.data.tags })
     }
