@@ -56,9 +56,37 @@ Page({
   },
   formSubmit: function (e) {
     app.globalData.sheet = { title: e.detail.value.title, outline: e.detail.value.outline, tags: this.data.tags }
-    wx.navigateTo({
-      url: '../share/share'
+    wx.setStorage({
+      key: 'title',
+      value: e.detail.value.title
     })
+    wx.setStorage({
+      key: 'outline',
+      value: e.detail.value.outline
+    })
+    wx.setStorage({
+      key: 'tags',
+      value: this.data.tags
+    })
+    wx.showToast({ title: '正在生成', icon: 'loading' })
+    wx.request({
+      url: 'https://wechat.wubocong.com/survey',
+      data: {
+        survey: app.globalData.sheet
+      },
+      method: 'post',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        wx.hideToast()
+        console.log(res.surveyId)
+        wx.navigateTo({
+          url: '../share/share'
+        })
+      }
+    })
+
   },
   formReset: function (e) {
     this.setData({ tags: [] })
